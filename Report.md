@@ -1,6 +1,6 @@
 # Technical Report: Mitigating Shortcut Learning in Deep Malware Detection
 
-**Author:** [Burak Bayram]
+**Author:** Burak Bayram
 **Date:** February 2026
 **Subject:** Improving Model Robustness via Stochastic Token Masking
 

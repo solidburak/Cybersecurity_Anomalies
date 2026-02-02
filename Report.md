@@ -1,12 +1,6 @@
-Here is a formal **Technical Case Study / Project Report**.
-
-This format is distinct from a `README`. While a `README` tells people *how to run* the code, this report tells the story of the *engineering challenges* you solved. It is perfect for a standalone `REPORT.md` file in your repo or to attach as a PDF to job applications.
-
----
-
 # Technical Report: Mitigating Shortcut Learning in Deep Malware Detection
 
-**Author:** [Your Name]
+**Author:** [Burak Bayram]
 **Date:** February 2026
 **Subject:** Improving Model Robustness via Stochastic Token Masking
 
@@ -102,6 +96,6 @@ The implementation of Stochastic Token Masking yielded a dramatic shift in model
 
 ## 6. Conclusion
 
-This project demonstrated that high accuracy metrics can mask critical failures in generalization, particularly when "shortcut features" are present. By diagnosing the data distribution mismatch and implementing a custom **Stochastic Token Masking** strategy, I transformed a brittle model into a robust detection engine capable of identifying attacks even when primary indicators are missing.
+This project demonstrated that high accuracy metrics can mask critical failures in generalization, particularly when "shortcut features" are present. By diagnosing the data distribution mismatch and implementing a custom **Stochastic Token Masking** strategy, I transformed a brittle model into a robust detection engine capable of identifying attacks even when primary indicators are missing. The fact stochastic masking probability is ended up becoming a cliff for the validation or test set success needs to be mentioned. It can be concluded data needs to be revised and studied again to get either more inclusive dataset or augmented dataset to clearly identify safe processes.
 
 This approach highlights the importance of **Adversarial Training** and **Data-Centric AI** in cybersecurity applications.

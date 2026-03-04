@@ -61,7 +61,7 @@ I introduced a stochastic mask that randomly overwrites the `parentProcessId` an
 **Logic:**
 
 1. Generate a random probability tensor for the current batch.
-2. Create a boolean mask where `probability < Threshold` (tuned to ~0.32).
+2. Create a boolean mask where `probability < Threshold` (tuned to ~0.13/0.10).
 3. Overwrite selected tokens with `0`, regardless of their true label (Safe or Malicious).
 
 ### 4.2 Implementation Snippet
@@ -71,8 +71,8 @@ I introduced a stochastic mask that randomly overwrites the `parentProcessId` an
 # Generate random noise probabilities
 probs = torch.rand_like(labels_flat, dtype=torch.float)
 
-# Universal Noise Injection: Target ~32% of all data
-mask = (probs < 0.32)
+# Universal Noise Injection: Target ~10% of all data
+mask = (probs < 0.10)
 
 # Force the model to see "Unknown" in both Safe and Malicious contexts
 b_parent[mask] = 0
@@ -82,7 +82,7 @@ b_ret[mask] = 0
 
 ### 4.3 The Effect
 
-This intervention "poisoned the well." The model could no longer assume that `Parent=0` implied safety, as 32% of clear attacks now also had `Parent=0`. This forced the gradient descent process to optimize weights for the `userId` embedding, the only remaining reliable discriminator.
+This intervention "poisoned the well." The model could no longer assume that `Parent=0` implied safety, as 10% of clear attacks now also had `Parent=0`. This forced the gradient descent process to optimize weights for the `userId` embedding, the only remaining reliable discriminator.
 
 ## 5. Results
 

@@ -62,4 +62,5 @@ It should handle the case if you have cuda or not.
 
 There are many manual checking codes you can play around as you like.
 
-!!! You should not care about comments so much, since as I edited things, comments prepared by ai stopped being consistent !!!
+!!! You should not care about comments so much, since as I edited things, comments prepared by ai stopped being consistent !!!(will be handled in the feature)
+

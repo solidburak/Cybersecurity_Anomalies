@@ -18,7 +18,7 @@ To overcome common CPU thermal bottlenecks and maximize training throughput on m
 
 ## 🛠️ System Requirements
 
-* **OS**: Arch Linux
+* **OS**: Only tested on Arch Linux
 * **GPU**: NVIDIA (CUDA 13.0+ recommended)
 * **Drivers**: Latest `nvidia-utils`
 * **Python**: 3.12 (managed via `uv`)
